@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+/* BODY */
+#navbarCelu {
+  display: none; }
+
+.negrita {
+  font-weight: 800; }
+
+.italica {
+  font-style: italic; }
+
+.family {
+  font-family: "Montserrat", sans-serif; }
+
+p {
+  font-weight: normal;
+  font-size: 20px; }
+
+h1 {
+  font-style: normal;
+  font-weight: 100;
+  font-size: 30px; }
+
+h2 {
+  font-style: bold;
+  font-weight: 600 !important;
+  font-size: 20px !important;
+  margin-bottom: 0; }
+
+.botones, .botonesr1, .botonesr2, .botones1, .botones2 {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: 15px; 
+  align-items: center !important;
+  display: block !important;
+}
+
+/* HEADER */
+header {
+  display: grid;
+  grid-template-columns: 10% 70%;
+  grid-template-rows: 100%;
+  grid-template-areas: "logo menu";
+  justify-content: space-around;
+  background-color: lavenderblush;
+  width: 100%;
+  height: 110px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+div nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+  height: 110px;
+  grid-area: "menu"; }
+  div nav ul li a:hover {
+    background-color: pink;
+    color: black;
+    font-weight: bolder; }
+
+li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+  padding: 20px; }
+
+div a img {
+  grid-area: "logo";
+  width: 100%;
+  height: 100%; }
+
+.animate__animated .animate__fadeInUp {
+  overflow: scroll; }
+
+
+/*seccion PRODUCTOS*/
+.seccionProductos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  padding-top: 20px; }
+
+.fotosProductos {
+  display: grid;
+  grid-template-columns: 22% 22% 22% 22%;
+  grid-template-rows: 45% 45%;
+  grid-template-areas: 'foto1 foto2 foto3 foto4' 
+                      'foto5 foto6 foto7 foto8';
+  column-gap: 10px;
+  row-gap: 10px;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+  justify-items:stretch;
+  width: 100%;
+  height: 1000px; }
+  
+  .fotosProductos div img {
+    width: 80%;
+    height: 80%;
+    transition: 1s; }
+  .fotosProductos div img:hover {
+    width: 82%;
+    height: 82%; 
+  }
+  
+  .foto1 {
+    grid-area: foto1;}
+  .foto2 {
+    grid-area: foto2;}
+  .foto3 {
+    grid-area: foto3;}
+  .foto4 {
+    grid-area: foto4;}
+  .foto5 {
+    grid-area: foto5;}
+  .foto6 {
+    grid-area: foto6;}  
+  .foto7 {
+    grid-area: foto7;}
+  .foto8 {
+    grid-area: foto8;}  
+
+  
+
+/* FOOTER */
+footer {
+  display: grid;
+  grid-template-columns: 10% 20% 45% 10%;
+  grid-template-rows: 100%;
+  grid-template-areas: 'logo menu newsletter sociales';
+  justify-content: center;
+  column-gap: 2%;
+  justify-items: center;
+  align-items: center;
+  background-color: lavenderblush;
+  color: black;
+  width: 100%;
+  height: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  footer div ul {
+    text-decoration: none;
+    list-style-type: none; }
+    footer div ul li {
+      padding: 2px; }
+      footer div ul li a:hover {
+        color: black;
+        font-weight: bolder; }
+
+.logoFooter {
+  grid-area: logo; }
+  .logoFooter img {
+    width: 50px;
+    height: 50px; }
+
+.menuFooter {
+  grid-area: menu; }
+
+.newsletterFooter {
+  grid-area: newsletter; }
+
+.footerSocial {
+  grid-area: sociales; }
+  .footerSocial img {
+    width: 50px;
+    height: auto; }
+
+@media screen and (max-width: 415px) {
+  #navbarCelu {
+    display: initial; }
+  header {
+    display: none; }
+  #logoCel {
+    width: 100px;
+    height: 100px; }
+  div nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    height: 250px;
+    grid-area: "menu"; }
+  .colorNavbar {
+    background-color: lavenderblush; }
+  
+  footer {
+    display: grid;
+    grid-template-rows: 10% 20% 45% 10%;
+    grid-template-columns: 100%;
+    grid-template-areas: 'logo'  'menu'  'newsletter'  'sociales';
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: lavenderblush;
+    color: black;
+    width: 100%;
+    height: 100%; }
+    footer div ul {
+      text-decoration: none;
+      list-style-type: none; }
+      footer div ul li {
+        padding: 3px; }
+        footer div ul li a {
+          font-size: 15px; }
+  .logoFooter {
+    grid-area: logo;
+    display: none; }
+  .menuFooter {
+    grid-area: menu;
+    font-size: 5px; }
+  .newsletterFooter {
+    grid-area: newsletter;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-align: center; }
+  .footerSocial {
+    grid-area: sociales; }
+    .footerSocial img {
+      width: 40px;
+      height: 40px; }
+  /*seccion PRODUCTOS*/
+  .seccionProductos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100px; }
+    .seccionProductos h1 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 20px; }
+    .seccionProductos p {
+      font-size: 15px;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: center; }
+  .fotosProductos {
+    display: grid;
+    grid-template-rows: 12% 12% 12% 12% 12% 12% 12% 12%;
+    grid-template-columns: 90%;
+    grid-template-areas: 'foto1' 'foto2' 'foto3' 'foto4' 'foto5'  'fotos6'  'foto7' 'foto8';
+    row-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%; }
+    .fotosProductos img {
+      width: 100%;
+      height: 100%; }
+  
+    }
+  
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  #navbarCelu {
+    display: initial; }
+  #logoCel {
+    width: 100px;
+    height: 100px; }
+  header {
+    display: none; }
+  div nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    height: 250px;
+    grid-area: "menu"; }
+  .colorNavbar {
+    background-color: lavenderblush; }
+  div a img {
+    grid-area: logo;
+    width: 100%;
+    height: 100%; }
+  
+  footer div ul li a {
+    font-size: 12px; }
+  .seccionProductos p {
+    text-align: center; }
+  }

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¿Queres cuidarte de una manera saludable, utilizando ingredientes naturales, que cuidan, protegen y respetan nuestro cuerpo y el medio ambiente? Tenemos una amplia gama de productos para vos!">
+    <title>Sección de venta de productos de Flora, cosmética natural. Aquí encontraras todos nuestros productos, su descripción y la forma de adquirirlos</title>
+    <link rel="shortcut icon" href="../imagen/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="main.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body class="family">
+    <!--FILA DEL LOGO Y EL MENU-->
+    <header>
+        <div>
+            <a href="../index.html">
+                <img src="imagen/logo.png" alt="logo">
+            </a>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="productos.html">PRODUCTOS</a>
+                    </li>
+                    <li>
+                        <a href="rutina.html">RUTINA</a>
+                    </li>
+                    <li>
+                        <a href="quienes-somos.html">QUIENES SOMOS</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="navbarCelu">
+        <nav class="navbar navbar-light colorNavbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <img id="logoCel" src="imagen/logo.png" alt="logo">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu Flora</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/productos.html">Productos</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="../html/rutina.html">Rutina</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="../html/quienes-somos.html">Quienes Somos</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="../html/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--CIERRE FILA DEL LOGO Y EL MENU-->
+    <!--COMIENZA LA INFORMACION DE MI SECCION-->
+    <main>
+        <div class="seccionProductos">
+            <h1 class="negrita">Productos</h1>
+            <p>Sin Parabenos | Sin Petrolatos | Sin Sulfatos | Sin Aluminio | Sin filtros solares químicos | Cruelty free | Veganos </p>
+        </div>
+        <div class="fotosProductos">
+            <div class="foto1">
+                <h2>Crema nutritiva</h2>
+                <img class="wow animate__animated animate__fadeInUp" src="imagen/crema.jpg" alt="crema" width="300" height="300">
+                <button onclick="agregarAlCarrito('crema nutritiva',2)">Agregar al carrito</button>
+            </div>
+            <div class="foto2">
+                <h2>Serum amarillo</h2>
+                <img class="wow animate__animated animate__fadeInUp" src="imagen/serumamarillo.jpg" alt="serum" width="200" height="300">
+                <button onclick="agregarAlCarrito('serum amarillo',0)">Agregar al carrito</button>
+            </div>
+            <div class="foto3">
+                <h2>Serum floral</h2>
+                <img class="wow animate__animated animate__fadeInUp"src="imagen/serumflores.jpg" alt="serum" width="350" height="300">
+                <button onclick="agregarAlCarrito('serum floral',9)">Agregar al carrito</button>
+            </div>
+            <div class="foto4">
+                <h2>Herramientas faciales</h2>
+                <img class="wow animate__animated animate__fadeInUp"src="imagen/accesorios.jpg" alt="accesorios" width="300" height="300">
+                <button onclick="agregarAlCarrito('herramientas faciales',5)">Agregar al carrito</button>
+            </div>
+            <div class="foto5">
+                <h2>Crema de rosas</h2>
+                <img class="wow animate__animated animate__fadeInUp"src="imagen/crema-rosa.jpg" alt="cremarosa" width="200" height="300">
+                <button onclick="agregarAlCarrito('crema de rosas',4)">Agregar al carrito</button>
+            </div>
+            <div class="foto6">
+                <h2>Crema de lavanda</h2>
+                <img class="wow animate__animated animate__fadeInUp"src="imagen/crema-violeta.jpg" alt="serum" width="250" height="300">
+                <button onclick="agregarAlCarrito('crema de lavanda',7)">Agregar al carrito</button>
+            </div>
+            <div class="foto7">
+                <h2>Crema exfoliante</h2>
+                <img class="wow animate__animated animate__fadeInUp"src="imagen/exfoliante.jpg" alt="serum" width="300" height="300">  
+                <button onclick="agregarAlCarrito('crema exfoliante',8)">Agregar al carrito</button>
+            </div>
+            <div class="foto8">
+                <h2>Crema corporal</h2>
+                <img class="wow animate__animated animate__fadeInUp" src="imagen/crema-cuerpo.jpg" alt="cremacuerpo" width="400" height="300"> 
+                <button onclick="agregarAlCarrito('crema corporal',4)">Agregar al carrito</button>
+            </div>
+            
+        </div>
+    </main>
+    <!--TERMINA LA INFORMACION DE MI SECCION-->
+    <!--INICIO DEL FOOTER-->
+    <footer>
+        <div class="logoFooter">
+            <a href="../index.html">
+                <img src="imagen/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="menuFooter">
+            <ul>
+                <li>
+                    <a href="productos.html">PRODUCTOS</a>
+                </li>
+                <li>
+                    <a href="rutina.html">RUTINA</a>
+                </li>
+                <li>
+                    <a href="contacto.html">CONTACTO</a>
+                </li>
+            </ul>
+        </div>
+        <div class="newsletterFooter">
+            <label for="email">Únete a nuestro Newsletter</label>
+            <input type="email" name="email"id="email" placeholder="ejemplo@email.com" class="botones">
+            <input type="button" value="Enviar" class="botones">
+        </div>
+        <div class="footerSocial">
+            <a href="https://www.facebook.com/">
+                <img src="../imagen/facebook.png" alt="logofacebook">
+            </a>
+            <a href="https://www.instagram.com/">
+                <img src="../imagen/instagram.png.crdownload" alt="logoinstagram">
+            </a>
+        </div>
+    </footer>
+    <!--FIN DEL FOOTER-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js">
+</script>
+<script>
+    new WOW().init();
+</script>
+
+</body>
+</html>
