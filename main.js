@@ -1,5 +1,6 @@
-
+const carrito = [];
 let comprar = "";
+
 
 function agregarAlCarrito (producto,stockProducto) {
     do {
@@ -8,6 +9,8 @@ function agregarAlCarrito (producto,stockProducto) {
                 comprar = prompt("Estas seguro que quieres agregar "+cantidad+ " producto/s al carrito? s / n");
                     if (comprar==="s"){
                         alert("Agregaste " + cantidad + " unidades del producto " + producto + " a tu carrito");
+                        carrito.push(producto);
+                        console.log(carrito);
                     }
                     else {
                         alert("Intentalo nuevamente");
@@ -19,3 +22,8 @@ function agregarAlCarrito (producto,stockProducto) {
                 }    
     } while (comprar !== "s");
 }
+
+function carritoFinal () {
+    alert("Tienes los siguientes productos agregados a tu carrito: \r" + carrito.join("\r"));
+}
+
