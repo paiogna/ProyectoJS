@@ -3,35 +3,63 @@ let comprar = "";
 const totalAPagar = [];
 let total1 = 0;
 
-
-function agregarAlCarrito (producto,stockProducto, precio) {
-    do {
-        let cantidad = prompt('¿Cuántas unidades del producto queres?');
-            if (cantidad<=stockProducto) {
-                comprar = prompt("Estas seguro que quieres agregar "+cantidad+ " producto/s al carrito? s / n");
-                    if (comprar==="s"){
-                        alert("Agregaste " + cantidad + " unidades del producto " + producto + " a tu carrito");
-                        const productos =
-                            {nombre: producto, cantidad: cantidad, precio: precio};
-                        carrito.push(productos.cantidad, productos.nombre, productos.precio);
-                        console.log(carrito);
-                        totalAPagar.push(productos.precio*cantidad);
-                        console.log(totalAPagar);
-                        const total = totalAPagar.reduce((acumulador, elemento) => acumulador + elemento, 0);
-                        return total1 = total;
-                    }
-                    else {
-                        alert("Intentalo nuevamente");
-                    }
+function agregarAlCarrito (producto, stock, precio, id) {
+    console.log(producto);
+    const cantidad = document.getElementById("cantidad"+id).value;
+    console.log(cantidad);
+    console.log(stock);
+    if (cantidad<=stock) {
+        alert("Agregaste " + cantidad + " unidades del producto " + producto + " a tu carrito por $" + precio*cantidad);
+            function Productos (cantidadP, tituloP, precioP) {
+                this.cantidad = cantidadP;     
+                this.titulo = tituloP;
+                this.precio = precioP;
                 }
-            else {
-                alert("No tenemos stock suficiente del producto " + producto + " por el momento");
-                comprar = "s";
-                }    
-    } while (comprar !== "s");
-}
+            const productO = new Productos (cantidad, producto, precio);
+            console.log(productO);
+            carrito.push(productO);
+            console.log(carrito);
+            totalAPagar.push(precio*cantidad);
+            console.log(totalAPagar);
+            const total = totalAPagar.reduce((acumulador, elemento) => acumulador + elemento, 0);
+            return total1 = total;
+    } else {
+            alert("No tenemos stock suficiente del producto " + producto + " por el momento");
+        }
+}    
+
+const productos = [
+    { id: 1, titulo: "Crema nutritiva", precio: 900, stock:2, imagen: 'imagen/crema.jpg' },
+    { id: 2, titulo: "Serum amarillo", precio: 1500, stock:0, imagen: 'imagen/serumamarillo.jpg' },
+    { id: 3, titulo: "Serum floral", precio: 1700, stock:9, imagen: 'imagen/serumflores.jpg'},
+    { id: 4, titulo: "Herramientas faciales", precio: 2000, stock: 5, imagen: 'imagen/accesorios.jpg' },
+    { id: 5, titulo: "Crema de rosas", precio: 1000, stock: 4,  imagen: 'imagen/crema-rosa.jpg'},
+    { id: 6, titulo: "Crema de lavanda", precio: 1100, stock: 7, imagen:'imagen/crema-violeta.jpg'},
+    { id: 7, titulo: "Crema exfoliante", precio: 1000, stock: 8, imagen: 'imagen/exfoliante.jpg'},
+    { id: 8, titulo: "Crema corporal", precio: 1500, stock: 4, imagen: 'imagen/crema-cuerpo.jpg' },
+];
+
+const prueba = document.querySelector('.tarjeta')
+
+productos.forEach (element => {
+    let card = document.createElement('div')
+    card.id = element.id;
+    card.style = "width: 18rem;"
+    card.innerHTML = `
+    <img class="card-img-top" src="${element.imagen}" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">${element.titulo}</h5>
+        <p class="card-text">$${element.precio}</p>
+        <p class="card-text">Stock:${element.stock}</p>
+        <label class="" for="">Cantidad:</label>
+        <input class="cantidad" type="text" name="" id="cantidad${element.id}"></input>
+        <button onclick="agregarAlCarrito('${element.titulo}','${element.stock}', '${element.precio}','${element.id}')">Agregar al carrito</button>
+    </div>`
+    prueba.appendChild(card);
+});
 
 function carritoFinal () {
-    alert("Tienes los siguientes productos agregados a tu carrito: \r" + carrito.join("\r") + " \r Total a pagar: " + total1);
+    alert("Tienes los siguientes productos agregados a tu carrito: \r" + JSON.stringify(carrito) + " \r Total a pagar: $" + total1);  
 }
+
 
