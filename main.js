@@ -32,6 +32,12 @@ function agregarAlCarrito (producto, stock, precio, id) {
     console.log(cantidad);
     console.log(stock);
     if (cantidad<=stock) {
+        Toastify({
+            text: `Agregaste al carrito el producto ${producto} por ${cantidad} unidades`,
+                style: {
+                background: "pink",
+                }
+            }).showToast();
         //alert("Agregaste " + cantidad + " unidades del producto " + producto + " a tu carrito por $" + precio*cantidad);
             function Productos (cantidadP, tituloP, precioP) {
                 this.cantidad = cantidadP;     
@@ -49,7 +55,18 @@ function agregarAlCarrito (producto, stock, precio, id) {
             const total = totalAPagar.reduce((acumulador, elemento) => acumulador + elemento, 0);
             return total1 = total;
     } else {
-            alert("No tenemos stock suficiente del producto " + producto + " por el momento");
+            //alert("No tenemos stock suficiente del producto " + producto + " por el momento");
+            Swal.fire({
+                title: 'Atención!',
+                text: 'No tenemos stock suficiente del producto seleccionado',
+                //icon: 'error',
+                imageUrl: 'imagen/logo.png',
+                imageWidth: 70,
+                imageHeight: 70,
+                confirmButtonText: 'Aceptar',
+                background: 'lavenderblush',
+                width: 400,
+            })
         }
 }    
 
