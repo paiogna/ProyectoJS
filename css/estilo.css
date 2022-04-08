@@ -127,6 +127,31 @@ div a img {
   width: 100%;
   height: 1200px; }
   
+  .fotosProductos2 {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'foto1 foto2 foto3';
+    column-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+    justify-items:stretch;
+    width: 100%;
+    height: 400px; }
+
+    .fotosProductos2 div img {
+      width: 100%;
+      height: 70%;
+      border-radius: 20%;
+      }
+  .novedades {
+    background-color: antiquewhite;
+  }
+  .fotosProductos2 h5 {
+    font-style: italic;
+  }
+
   .fotosProductos div img {
     width: 80%;
     height: 50%;
@@ -153,7 +178,32 @@ div a img {
   .foto8 {
     grid-area: foto8;}  
 
-  
+.fotosRYM {
+      display: grid;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: 45% 45%;
+      grid-template-areas: 'foto1 foto2 foto3' 
+                          'foto4 foto5 foto6';
+      column-gap: 10px;
+      row-gap: 10px;
+      justify-content: center;
+      align-content: center;
+      align-items: stretch;
+      justify-items:stretch;
+      width: 100%;
+      height: 1200px; }
+
+.fotosRYM img {
+  height: 50%;
+  border-radius: 50%;
+}
+
+.fotosRYM h5 {
+  font-weight: 800;
+}
+.fotosRYM h6 {
+  font-weight: 300;
+}
 
 /* FOOTER */
 footer {

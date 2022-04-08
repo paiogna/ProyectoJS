@@ -124,3 +124,51 @@ function carritoFinal () {
     totalCart.innerHTML = "El total a pagar es $ " + total1;
     cerrarCart.innerHTML = `<button onclick="cerrarCarts()">Cerrar carrito</button>`
 }
+
+// const API_URL = 'https://rickandmortyapi.com/api';
+// const ENDPOINT_LISTADO_PERSONAJES = '/character';
+// const PARAMS_LISTADO_PERSONAJES = '/1,2,3,4,5,6';
+
+
+const rickAndMorty = document.querySelector('.rickAndMorty')
+
+fetch ("https://rickandmortyapi.com/api/character/1,2,3,4,5,242")
+.then ((response) => response.json())
+.then ((data) => {
+    data.forEach (element => {
+        let card = document.createElement('div')
+        card.id = element.id;
+        card.style = "width: 18rem;"
+        card.innerHTML = `
+        <img class="card-img-top" src="${element.image}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">Nombre: ${element.name}</h5>
+        <h6 class="card-title">Status: ${element.status}</h6>
+        <h6 class="card-title">Especie: ${element.species}</h6>
+        <h6 class="card-title">Origen: ${element.origin.name}</h6>
+        </div>`
+        rickAndMorty.appendChild(card);
+    })
+})
+
+// fetch ("https://rickandmortyapi.com/api/character/?page=13")
+// .then ((response) => response.json())
+// .then ((data) => {console.log(data)})
+
+const fotosProductos2 = document.querySelector('.fotosProductos2')
+
+fetch ('/novedades.json')
+.then ((response) => response.json())
+.then ((data) => {
+    data.forEach (element => {
+        let card = document.createElement('div')
+        card.id = element.id;
+        card.style = "width: 18rem;"
+        card.innerHTML = `
+        <img class="card-img-top" src="${element.imagen}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">${element.titulo}</h5>
+        </div>`
+        fotosProductos2.appendChild(card);
+    })
+})

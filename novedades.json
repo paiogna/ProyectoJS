@@ -1,0 +1,5 @@
+[
+    { "id": 1, "titulo": "Protector Solar", "precio": 900, "stock":2, "imagen": "imagen/protector.webp" },
+    { "id": 2, "titulo": "Pad Desmaquillantes", "precio": 1500, "stock":0, "imagen": "imagen/padDesmaquillante.jpeg" },
+    { "id": 3, "titulo": "Neceser", "precio": 1700, "stock":9, "imagen": "imagen/neceser.jpeg"}
+]
