@@ -16,11 +16,14 @@
     <link rel="stylesheet" href="css/estilo.css">
     <script src="main.js" defer></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </head>
 <body class="family">
     <!--FILA DEL LOGO Y EL MENU-->
@@ -47,6 +50,14 @@
                     </li>
                     <li>
                         <a href="contacto.html">CONTACTO</a>
+                    </li>
+                    <li>
+                        <div class="contCarrito" >
+                            <button onclick="carritoFinal()" style="border: 2px solid black; border-radius: 20px; background-color: pink; color: black; font-size: 15px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                Ver Carrito
+                                <img src="imagen/cart.png" style="width: 30px; height: 30px;">
+                            </button>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -82,6 +93,14 @@
                             <li>
                                 <a class="nav-link" href="../html/contacto.html">Contacto</a>
                             </li>
+                            <li> 
+                                <div class="contCarrito" >
+                                    <button onclick="carritoFinal()" style="border: 2px solid black; border-radius: 20px; background-color: pink; color: black; font-size: 25px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                        Ver Carrito
+                                        <img src="imagen/cart.png" style="width: 50px; height: 50px;">
+                                    </button>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -89,37 +108,26 @@
             </div>
         </nav>
     </div>
-    <!--CIERRE FILA DEL LOGO Y EL MENU-->
-    <!--COMIENZA LA INFORMACION DE MI SECCION-->
+    <!--/FILA DEL LOGO Y EL MENU-->
+    <!--INFORMACION DE MI SECCION-->
     <main>
         <div class="seccionProductos">
             <h1 class="negrita">Productos</h1>
             <p>Sin Parabenos | Sin Petrolatos | Sin Sulfatos | Sin Aluminio | Sin filtros solares químicos | Cruelty free | Veganos </p>
         </div>
-        <div class="contCarrito" >
-            <button onclick="carritoFinal()" id="btnCarrito">Ver mi carrito</button>   
-            <div class= "txtCarrito" style="border: 2px solid pink; border-radius: 20px;">
-            </div>
-            <div class= "totalCart" style="background-color: pink; font-size: 20px; font-weight: bold">
-            </div>
-            <div class="cerrarCart">
-            </div>
-        </div>
-        <div class="tarjeta fotosProductos">        
+        <div class="tarjeta fotosProductos" >        
         </div>
         <div class="novedades">
-        <div class="seccionProductos">
-            <h1 class="negrita">Proximamente...</h1>
-            <p>Dentro de poco vamos a tener nuevos productos para vos!</p>
-        </div>
-        <div class="tarjeta  fotosProductos2">        
-        </div>
-        </div>
-        <div class="rickAndMorty fotosRYM">  
+            <div class="seccionProductos">
+                <h1 class="negrita">Proximamente...</h1>
+                <p>Dentro de poco vamos a tener nuevos productos para vos!</p>
+            </div>
+            <div class="fotosProductos2">        
+            </div>
         </div>
     </main>
-    <!--TERMINA LA INFORMACION DE MI SECCION-->
-    <!--INICIO DEL FOOTER-->
+    <!--/INFORMACION DE MI SECCION-->
+    <!--FOOTER-->
     <footer>
         <div class="logoFooter">
             <a href="../index.html">
@@ -153,11 +161,48 @@
             </a>
         </div>
     </footer>
-    <!--FIN DEL FOOTER-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!--/FOOTER-->
+    <!--MODAL-->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+            <div class="modal-header" style="background-color: lavenderblush;">
+                <h5 class="modal-title" id="exampleModalLongTitle">Tus productos de  <img src='imagen/logo.png' style='width:50px; height:50px'></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: lavenderblush; font-size: 20px; font-weight: bold">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-bodyProd">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Cant.</th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                        </tbody>
+                    </table>
+                </div>
+                <div class= "totalCartModal" style="background-color: pink; font-size: 20px; font-weight: bold ; text-align: center">
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: lavenderblush; color:black; font-weight: bold">Cerrar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--/MODAL-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>$('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')})
+    </script>
 </body>
 </html>

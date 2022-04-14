@@ -61,7 +61,7 @@ div.contCarrito {
 /* HEADER */
 header {
   display: grid;
-  grid-template-columns: 10% 70%;
+  grid-template-columns: 10% 80%;
   grid-template-rows: 100%;
   grid-template-areas: "logo menu";
   justify-content: space-around;
@@ -79,7 +79,7 @@ div nav ul {
   align-items: center;
   list-style-type: none;
   width: 100%;
-  height: 110px;
+  height: 90px;
   grid-area: "menu"; }
   div nav ul li a:hover {
     background-color: pink;
@@ -95,7 +95,7 @@ li a {
 
 div a img {
   grid-area: "logo";
-  width: 100%;
+  width: 80%;
   height: 100%; }
 
 .animate__animated .animate__fadeInUp {
@@ -193,7 +193,7 @@ div a img {
       width: 100%;
       height: 1200px; }
 
-.fotosRYM img {
+/* .fotosRYM img {
   height: 50%;
   border-radius: 50%;
 }
@@ -203,7 +203,7 @@ div a img {
 }
 .fotosRYM h6 {
   font-weight: 300;
-}
+} */
 
 /* FOOTER */
 footer {
@@ -337,8 +337,20 @@ footer {
       width: 100%;
       height: 100%; }
   
-    }
+    .fotosProductos2 {
+      display: grid;
+      grid-template-rows: 30% 30% 30%;
+      grid-template-columns: 90%;
+      grid-template-areas: 'foto1' 'foto2' 'foto3';
+      row-gap: 10px;
+      justify-content: center;
+      align-content: center;
+      align-items: stretch;
+      justify-items:stretch;
+      width: 100%;
+      height: 100%; }
   
+  } 
 @media screen and (min-width: 415px) and (max-width: 768px) {
   #navbarCelu {
     display: initial; }
